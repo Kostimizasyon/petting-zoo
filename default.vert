@@ -11,12 +11,16 @@ layout (location = 0) in vec3 aPos;					//we say that hey there is a layout for 
 
 //uniform float scale;								//A variable that can be acessed ANYWHERE
 													//never declare unless u will use, as openGL will auto delete if u dont	
+
+uniform mat4 projection; //Magic convertor
+
 void main()
 {
   // gl_Position = vec4(aPos.x * scale, aPos.y * scale, aPos.z * scale, 1.0);	 //OpenGL knows it needs to read gl_Position to take vector info.
   // color = aColor;															//we will pass color to the frag
   //  texCoord = aTex;
 
-	gl_Position = vec4(aPos, 1.0);
+	gl_Position = projection * vec4(aPos, 1.0);
+	//multiply by our projection to broaden our horizons
 
 }
