@@ -139,16 +139,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AerialObject.cpp" />
+    <ClCompile Include="AeroDynamics.cpp" />
+    <ClCompile Include="Aircraft.cpp" />
     <ClCompile Include="EBO.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="glad.c" />
+    <ClCompile Include="Missile.cpp" />
+    <ClCompile Include="Renderable.cpp" />
     <ClCompile Include="shaderClass.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="shooting_star.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="stb.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="VBO.cpp">
@@ -161,12 +166,17 @@
     <Text Include="default.frag" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AeroDynamics.h" />
+    <ClInclude Include="AerialObject.h" />
+    <ClInclude Include="Aircraft.h" />
     <ClInclude Include="EBO.h" />
+    <ClInclude Include="Renderable.h" />
     <ClInclude Include="main.h" />
     <ClCompile Include="VAO.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
+    <ClInclude Include="Missile.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="VAO.h" />
     <ClInclude Include="VBO.h" />
@@ -174,6 +184,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
+    <ClInclude Include="Window.h" />
+    <ClInclude Include="window_constants.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="C:\Users\05545591455\Downloads\LoopThingy.png" />
