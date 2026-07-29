@@ -122,9 +122,4 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
-  <ItemGroup>
-    <Image Include="C:\Users\05545591455\Downloads\LoopThingy.png">
-      <Filter>Resource Files\Textures</Filter>
-    </Image>
-  </ItemGroup>
 </Project>
