@@ -24,6 +24,7 @@
     <ProjectGuid>{d68381e7-458d-4828-9362-23109cbbd29f}</ProjectGuid>
     <RootNamespace>OpenGLLearnin</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Petting Zoo</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
