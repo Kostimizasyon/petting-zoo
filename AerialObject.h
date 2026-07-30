@@ -4,14 +4,22 @@
 #include "AeroDynamics.h"
 #include "Renderable.h"
 
+enum Trim {
+    LevelFlight,
+    NoTrim
+};
+
 class AerialObject : public AeroDynamics, public Renderable {
 protected:
     
     //Position
+    GLfloat angle_of_attack = 0.0f;
+    
     GLfloat direction_x = 0.0f;
     GLfloat direction_y = 0.0f;
 
     //Info
+    GLfloat max_speed = 0.0f;
     GLfloat speed_x = 0.0f;
     GLfloat speed_y = 0.0f;
     double altitude = 0;
@@ -24,6 +32,8 @@ protected:
     double mass = 0;
     double temperature = 0;
     double pressure = 0;
+
+    Trim trim_mode = Trim::LevelFlight;
 
     // Helper to keep atmospheric and speed metrics in sync
     void recalculate_environment() {
@@ -38,7 +48,7 @@ protected:
     }
 
 public:
-    AerialObject(GLfloat direction_x, GLfloat direction_y, GLfloat speed_x, GLfloat speed_y,
+    AerialObject(GLfloat angle_of_attack, GLfloat direction_x, GLfloat direction_y,GLfloat max_speed, GLfloat speed_x, GLfloat speed_y,
         double drag_area, double lift_area, double mass);
 
     virtual ~AerialObject() = default;
@@ -49,6 +59,8 @@ public:
 
     void update_parameters(float dt);
 
+    void handle_trim();
+
     void move(float dt);
 
     virtual void display_stats() = 0;
@@ -58,15 +70,20 @@ public:
     virtual void decrement_dt(const float dt) = 0;
 
     // Getters for position and basic state
+    GLfloat get_aoa() const { return angle_of_attack;  }
     GLfloat get_direction_x() const { return direction_x; }
     GLfloat get_direction_y() const { return direction_y; }
     GLfloat get_speed_x() const { return speed_x; }
     GLfloat get_speed_y() const { return speed_y; }
+    Trim get_trim() const { return trim_mode; }
     double get_mass() const { return mass; }
     double get_altitude() const { return altitude; }
 
-
     // Setters (with optional bool update_env = true)
+    void set_aoa(GLfloat aoa) { angle_of_attack = aoa; }
+
+    void set_trim(Trim mode) { trim_mode = mode; }
+
     void set_direction_x(GLfloat x) { direction_x = x; }
 
     void set_direction_y(GLfloat y, bool auto_update = true) {

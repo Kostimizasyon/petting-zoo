@@ -30,7 +30,7 @@ public:
 
     ~Aircraft() = default;
 
-    Aircraft(const GLfloat direction_x,const GLfloat direction_y,const GLfloat speed_x,const GLfloat speed_y, double drag_area, double lift_area, double mass,
+    Aircraft(const GLfloat angle_of_attack, const GLfloat direction_x,const GLfloat direction_y,const GLfloat max_speed, const GLfloat speed_x,const GLfloat speed_y, double drag_area, double lift_area, double mass,
         const std::string& nato_designation, double hardpoint_count, double dry_engine_power, double wet_engine_power, double max_fuel_load,
         double fuel_load, double dry_usage_sec, double wet_usage_sec);
 

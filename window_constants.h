@@ -5,4 +5,7 @@ namespace window_const {
 	constexpr float ASPECT_RATIO = WINDOW_WIDTH / WINDOW_HEIGHT;
 	constexpr float WORLD_HEIGHT = 10000;
 	constexpr float WORLD_WIDTH = WORLD_HEIGHT * ASPECT_RATIO;
+
+	constexpr float LOGIC_SPEED_LIMIT_Y = 67;
+	constexpr float LOGIC_SPEED_LIMIT_X = 670;
 }
