@@ -7,7 +7,7 @@ int main() {
 	std::unique_ptr<Aircraft> su27 = std::make_unique<Aircraft>(
 		1.0f,
 		0.0f, 1000.0f,         // 1, 2: direction_x, direction_y (Position in meters)
-		400.0f,
+		500.0f,
 		500.0f, 0.0f,          // 3, 4: speed_x, speed_y (Cruise velocity ~Mach 0.75 in m/s)
 		1.3,                   // 5: drag_area (Equivalent zero-lift drag area in m²)
 		62.0,                  // 6: lift_area (Wing reference area in m²)

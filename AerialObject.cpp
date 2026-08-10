@@ -81,7 +81,7 @@ void AerialObject::update_y_speed(const double lift_coefficient, const double dt
 	if (speed_y > window_const::LOGIC_SPEED_LIMIT_Y) speed_y = window_const::LOGIC_SPEED_LIMIT_Y;
 
 }
-void AerialObject::update_parameters(const float dt) {
+void AerialObject::update_parameters(const double dt) {
 
 	altitude += speed_y * dt;
 	distance += speed_x * dt;
@@ -93,7 +93,7 @@ void AerialObject::update_parameters(const float dt) {
 
 }
 
-void AerialObject::move(const float dt) {
+void AerialObject::move(const double dt) {
 
 	const double drag_coefficient = mach_number >= 1 ? 0.2 : 0.5;
 	const double lift_coefficient = mach_number >= 1 ? 0.2 : 0.15;
@@ -113,4 +113,10 @@ void AerialObject::move(const float dt) {
 	display_stats();
 
 	Update_Pos(angle_of_attack, direction_x, direction_y);
+}
+
+void AerialObject::pull_aoa(const float aoa) {
+
+
+
 }

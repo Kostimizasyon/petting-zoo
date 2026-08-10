@@ -40,7 +40,7 @@
 		}
 	}
 
-	void Aircraft::fire_missile(const float dt) {
+	void Aircraft::fire_missile(const double dt) {
 
 		if (loadout.empty()) {
 			std::cout << "No missiles to fire!";
@@ -57,7 +57,7 @@
 		}
 	}
 
-	void Aircraft::fire_missile_salvo(const short int amount, const float dt) {
+	void Aircraft::fire_missile_salvo(const short int amount, const double dt) {
 
 		for (int i = 0; i < amount; i++) {
 			fire_missile(dt);
@@ -80,7 +80,7 @@
 		}
 	}
 
-	void Aircraft::decrement_dt(const float dt) {
+	void Aircraft::decrement_dt(const dobule dt) {
 		if (is_aft && fuel_load > 0) {
 			fuel_load -= wet_usage_sec * dt;
 			set_mass(mass -= wet_usage_sec * dt);

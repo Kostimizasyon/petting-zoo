@@ -57,11 +57,13 @@ public:
 
     void update_y_speed(const double lift_coefficient, const double dt);
 
-    void update_parameters(float dt);
+    void update_parameters(double dt);
 
     void handle_trim();
 
-    void move(float dt);
+    void move(double dt);
+
+    void pull_aoa(const float aoa);
 
     virtual void display_stats() = 0;
 

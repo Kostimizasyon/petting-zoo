@@ -36,12 +36,12 @@ public:
     void explode();
 
     // Launch
-    void launch(const Aircraft& launch_aircraft, const float dt);
+    void launch(const Aircraft& launch_aircraft, const double dt);
 
     // Virtual
     double get_push_force() override;
 
-    void decrement_dt(const float dt) override;
+    void decrement_dt(const double dt) override;
 
     void display_stats() override;
 };

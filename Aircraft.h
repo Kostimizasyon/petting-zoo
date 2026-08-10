@@ -46,13 +46,13 @@ public:
     void load_missiles(const std::vector<Missile>& missiles);
 
     // Missile Shoot
-    void fire_missile(const float dt);
-    void fire_missile_salvo(const short int amount, const float dt);
+    void fire_missile(const double dt);
+    void fire_missile_salvo(const short int amount, const double dt);
 
     // virtual implementation
     double get_push_force() override;
 
-    void decrement_dt(const float dt) override;
+    void decrement_dt(const double dt) override;
 
     void display_stats() override;
 };

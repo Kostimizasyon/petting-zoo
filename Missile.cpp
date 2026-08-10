@@ -31,7 +31,7 @@ void Missile::explode() {
 }
 
 // Get shot
-void Missile::launch(const Aircraft& launch_aircraft, const float dt) {
+void Missile::launch(const Aircraft& launch_aircraft, const double dt) {
     // 1. Inherit position (X & Y / Altitude) from the aircraft
     set_direction_x(launch_aircraft.get_direction_x());
     set_direction_y(launch_aircraft.get_direction_y() - 5.0f, false);
@@ -52,7 +52,7 @@ double Missile::get_push_force() {
     else                             return 0;
 }
 
-void Missile::decrement_dt(const float dt) {
+void Missile::decrement_dt(const double dt) {
     double time_remaining = dt;
 
     if (engine_time > 0 && time_remaining > 0) {

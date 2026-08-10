@@ -1,15 +1,15 @@
 #pragma once
 #include <cmath>
 
-constexpr double GAMMA_CONSTANT = 1.4;
-constexpr double GAS_CONSTANT = 8.31446;
-constexpr double STAR_GAS_CONSTANT = 287.055023;
-constexpr float GRAVITY_CONSTANT = 9.81f;
-constexpr double TEMPERATURE = 293.0;
-constexpr double SEA_LEVEL_TEMP = 288.15;     // Standard is 15°C / 288.15K
-constexpr double SEA_LEVEL_PRESSURE = 101325.0; // Pascals
-constexpr double LAPSE_RATE = 0.0065;
-constexpr double MOLAR_MASS_AIR = 0.02896968;
+static constexpr double GAMMA_CONSTANT = 1.4;
+static constexpr double GAS_CONSTANT = 8.31446;
+static constexpr double STAR_GAS_CONSTANT = 287.055023;
+static constexpr float GRAVITY_CONSTANT = 9.81f;     // float for GLflaot optimization
+static constexpr double TEMPERATURE = 293.0;
+static constexpr double SEA_LEVEL_TEMP = 288.15;     // Standard is 15°C / 288.15K
+static constexpr double SEA_LEVEL_PRESSURE = 101325.0; // Pascals
+static constexpr double LAPSE_RATE = 0.0065;
+static constexpr double MOLAR_MASS_AIR = 0.02896968;
 
 class AeroDynamics {
 public:
